@@ -1,12 +1,16 @@
+alert("Please Do Not Refresh The Page");
 window.addEventListener('load',function(){
 	setTimeout(function(){
 		document.querySelector('.add-to').style.display ="block";
 		console.log("hello");
 	},3000);
 	document.querySelector('.later').addEventListener('click',function(){
-		document.querySelector('.add-to').style.display ="none";
+	document.querySelector('.add-to').style.display ="none";
 	})
     
+})
+claim.addEventListener('click',function(){
+	document.getElementById('LoginForm').style.display = "block";
 })
 
 
@@ -18,6 +22,7 @@ function MyPoints(){
 			   //console.log(a++);
 			   document.getElementById('points').innerHTML=a++;
 			   myLog();
+			   mypointsAccess();
 			})
 		}
 	//console.log(LoginForm);
@@ -25,12 +30,20 @@ function MyPoints(){
 }
 MyPoints();
 
+
+
+
 function myLog(){
-	if(points.innerHTML === "4"){
+	if(points.innerHTML === "3"){
 		  claim.style.display = "block";
 	}else{
 		  console.log("noe");
 	}
+}
+
+function mypointsAccess(){
+   acpoints.value=points.innerHTML;
+   console.log(acpoints.value);
 }
 
 
@@ -82,13 +95,22 @@ function myclick(evt,myad){
 	cmplteAd();
 }
 
+myclose.addEventListener('click',function(){
+	document.querySelector('.guidtool').style.display = "none";
+})
+function mybase(evt,bae){
+	//alert("hello");
+	var ba = document.getElementsByClassName('base');
+	for(var i =0;i<ba.length;i++){
+		ba[i].style.display = "none";
+	}
+	document.getElementById(bae).style.display = "block";
+	
+}
 function prohold(){
 	(profilePage.style.display ==="none")?profilePage.style.display = "block" : profilePage.style.display = "none"
 	
 }
-backfromprofile.addEventListener('click',function(){
-		profilePage.style.display ="none";
-})
 
 
 
@@ -99,5 +121,9 @@ function mypage(evt,cp){
 	 }
 	 document.getElementById(cp).style.display="block";
 }
+
+
+
+
 
 
